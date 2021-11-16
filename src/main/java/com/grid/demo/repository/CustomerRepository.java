@@ -1,0 +1,8 @@
+package com.grid.demo.repository;
+
+import com.grid.demo.model.Customer;
+import org.springframework.data.repository.CrudRepository;
+
+public interface CustomerRepository extends CrudRepository<Customer, Long> {
+
+}

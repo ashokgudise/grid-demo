@@ -1,0 +1,19 @@
+<meta charset="ISO-8859-1">
+<link data-th-href="@{/css/bootstrap.min.css}" rel="stylesheet">
+<link data-th-href="@{/css/main.css}" rel="stylesheet">
+
+<title>Customer Update</title>
+<div>
+    <form th:action="@{/customerUpdate}" th:object="${customer}" method="POST">
+        <input type="text" name="customerName" th:value="${customer.customerName}">
+        <input type="text" name="contactName" th:value="${customer.contactName}">
+        <input type="textro" name="customerId"  th:value="${customer.customerId}" readonly="">
+        <input type="text" name="age" th:value="${customer.age}">
+        <input type="text" name="sex" th:value="${customer.sex}">
+        <input type="text" name="address" th:value="${customer.address}">
+        <input type="text" name="city" th:value="${customer.city}">
+        <input type="text" name="postalCode" th:value="${customer.postalCode}">
+        <input type="text" name="country" th:value="${customer.country}">
+        <button type="submit">UPDATE</button>
+    </form>
+</div>

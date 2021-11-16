@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Table Tree Mode On Demand with SQL Demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alasql/0.5.5/alasql.min.js"></script>
+</head>
+
+<body class="viewport">
+    <div class="demo-description">
+        <h1>Server-side Table Tree mode</h1>
+        Table in this example is used in Tree mode. That is achieved by setting the dataSource's 'keyDataField' and
+        'parentDataField' properties.
+        When a row is expanded the Table sends a request with the expanded row data object on the Server-Side
+        Datasource. The server uses the SQL query sent by the Server-Side Datasource and returns the requested sub-rows
+        collection.
+        This example uses a demo server with AlaSQL that generates SQL to show how a real server might use the requests
+        sent by the Table. The Server-Side Table usage does not have any restrictions on the server-side
+        technologies used.
+    </div>
+    <smart-table id="table"></smart-table>
+    <br />
+    <br />
+    <h3>SQL Query</h3>
+    <div id="query"></div>
+
+    <!-- scripts -->
+    <script src="../../../common/data.js"></script>
+    <script  src="../../../source/modules/smart.table.js"></script>
+    <script  src="index.js"></script>
+
+</body>
+
+</html>

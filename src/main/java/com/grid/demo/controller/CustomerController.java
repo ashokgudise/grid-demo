@@ -17,6 +17,12 @@ public class CustomerController {
     @Autowired
     private CustomerSerivce customerSerivce;
 
+    @RequestMapping("/custom")
+    public String custom(Model model){
+        model.addAttribute("customers", this.customerSerivce.findAll());
+        return "index";
+    }
+
     @RequestMapping("/")
     public String home(Model model){
         model.addAttribute("customers", this.customerSerivce.findAll());
